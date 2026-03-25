@@ -4,7 +4,7 @@ SPOT_API_BASE = "https://api.binance.com"
 FUTURES_API_BASE = "https://fapi.binance.com"
 
 DATA_DIR = "data"
-TOP_N = 2
+TOP_N = 1
 QUOTE_ASSET = "USDT"
 
 REQUEST_TIMEOUT = 20

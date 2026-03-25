@@ -145,9 +145,9 @@ def main():
     full = full.sort_values(["trading_pair", "open_time"]).copy()
 
     enriched = (
-        full.groupby("trading_pair", group_keys=False)
-        .apply(add_indicators)
-        .reset_index(drop=True)
+        full.groupby("trading_pair", group_keys=True)
+        .apply(add_indicators, include_groups=False)
+        .reset_index(drop=False)
     )
 
     enriched.to_csv(OUTPUT_FILE, index=False, encoding="utf-8")
